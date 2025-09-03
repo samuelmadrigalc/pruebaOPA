@@ -1,18 +1,10 @@
-/* let inputEl = document.querySelector("input");
+document.getElementById("inicio").addEventListener("input", function () {
+  this.value = this.value.replace(/[^0-9]/g, '');
+});
 
-inputEl.addEventListener("input", () => {
-  let value = inputEl.value;
-  if(value.length == 0) return;
-
-  const regex = /^\d+$/;
-  const isValid = regex.test(value);
-
-  if(!isValid){
-    alert('Sólo se permiten números')
-    inputEl.value = value.slice(0, value.length - 1);
-  }
-}) */
-
+document.getElementById("fin").addEventListener("input", function () {
+  this.value = this.value.replace(/[^0-9]/g, '');
+});
 
 ////////////////////////////////////////////////////////////////////////////////////  
 
@@ -43,6 +35,7 @@ function esPerfecto(n) {
 
 function mostrarPerfectos() {
 
+  
   const inicio = parseInt(document.getElementById("inicio").value, 10);
 
   const fin = parseInt(document.getElementById("fin").value, 10);

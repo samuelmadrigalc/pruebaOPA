@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f7f9fb;
+}
+
+h1 {
+  text-align: center;
+}
+
+.filaInputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  padding: 6px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 150px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.filaContenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.caja {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  min-height: 200px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.caja h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#perfecto {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contenedorReseteo {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.contenedorReseteo button {
+  background: #d9534f;
+}
+
+.contenedorReseteo button:hover {
+  background: #c9302c;
+}
+
+
+.cajaContenido {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 630px;
+  min-height: 200px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cajaContenido h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.cajaResultados {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  padding: 20px;
+  width: 300px;
+  min-height: 200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+  font-size: xx-large;
+}
+
+.cajaResultados h3 {
+  margin-top: 0;
+  text-align: center;
+}
