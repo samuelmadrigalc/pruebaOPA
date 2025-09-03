@@ -1,23 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfect//Num</title>
     <script src="script.js"></script>
-</head>
-<body>
-    <div>
-        <label>Valor inicial: <input type="number" pattern="[0-9]*" id="inicio"></label>
-    </div>
-    <div>
-        <label>Valor final: <input type="number" pattern="[0-9]*" id="fin"></label>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Números Perfectos</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <form class="d-flex" role="search">
+            <button class="btn btn-outline-success" type="submit">
+              Conóceme
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="filaInputs">
+      <div class="caja">
+        <div>
+          <label for="inicio"
+            >Valor inicial:
+            <input
+              type="number"
+              id="inicio"
+              min="1"
+              step="1"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          /></label>
+        </div>
+        <div>
+          <label for="fin"
+            >Valor final:
+            <input
+              type="number"
+              id="fin"
+              min="1"
+              step="1"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          /></label>
+        </div>
+      </div>
+
+      <button onclick="mostrarPerfectos()">Mostrar Perfectos</button>
     </div>
 
-    <button onclick="mostrarPerfectos()">Mostrar Perfectos</button>
-    <button onclick="resetear()"> Resetear </button>
-    <div id="perfecto"></div>
-    <div id="chequeo"></div>
-</body>
+    <div class="filaContenido">
+      <div class="cajaContenido">
+        <p>
+          Un número perfecto es un número natural que es igual a la suma de sus
+          divisores propios positivos. (excluyendose a él mismo claro)
+        </p>
+        <p>Por ejemplo, el número 6 es un número perfecto.</p>
+        <p>Si miramos sus divisores y los sumamos:</p>
+        <p>1 + 2 + 3 = 6</p>
+        <p>6 = 6</p>
+        <p>
+          Podemos ver que la suma de todos sus divisores da el mismo valor del
+          propio número, siendo este entonces...
+        </p>
+        <p>¡Un número perfecto!</p>
+      </div>
+      <div class="cajaResultados">
+        <h3>¡Resultados!</h3>
+        <div id="perfecto"></div>
+        <div id="chequeo"></div>
+        <div class="contenedorReseteo">
+          <button onclick="resetear()">Resetear</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
