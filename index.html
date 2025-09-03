@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect//Num</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div>
+        <label>Valor inicial: <input type="number" pattern="[0-9]*" id="inicio"></label>
+    </div>
+    <div>
+        <label>Valor final: <input type="number" pattern="[0-9]*" id="fin"></label>
+    </div>
+
+    <button onclick="mostrarPerfectos()">Mostrar Perfectos</button>
+    <button onclick="resetear()"> Resetear </button>
+    <div id="perfecto"></div>
+    <div id="chequeo"></div>
+</body>
+</html>
