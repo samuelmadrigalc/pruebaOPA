@@ -1,10 +1,10 @@
-document.getElementById("inicio").addEventListener("input", function () {
+/* document.getElementById("inicio").addEventListener("input", function () {
   this.value = this.value.replace(/[^0-9]/g, '');
 });
 
 document.getElementById("fin").addEventListener("input", function () {
   this.value = this.value.replace(/[^0-9]/g, '');
-});
+}); */
 
 ////////////////////////////////////////////////////////////////////////////////////  
 

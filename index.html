@@ -37,15 +37,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit">
-              Conóceme
-            </button>
+            <a href="#contacto" class="btn btn-outline-success">Conóceme</a>
           </form>
         </div>
       </div>
     </nav>
 
-    <div class="filaInputs">
+    <div id="inputs" class="filaInputs">
       <div class="caja">
         <div>
           <label for="inicio"
@@ -69,13 +67,30 @@
               oninput="this.value = this.value.replace(/[^0-9]/g, '')"
           /></label>
         </div>
+
+        <a
+          href="#resultados"
+          class="btn btn-success"
+          onclick="mostrarPerfectos()"
+          >Mostrar Perfectos</a
+        >
       </div>
 
-      <button onclick="mostrarPerfectos()">Mostrar Perfectos</button>
+      <div class="waves"></div>
     </div>
 
     <div class="filaContenido">
-      <div class="cajaContenido">
+      <div class="burbujas">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div id="resultados" class="cajaContenido">
         <p>
           Un número perfecto es un número natural que es igual a la suma de sus
           divisores propios positivos. (excluyendose a él mismo claro)
@@ -95,8 +110,28 @@
         <div id="perfecto"></div>
         <div id="chequeo"></div>
         <div class="contenedorReseteo">
-          <button onclick="resetear()">Resetear</button>
+          <a href="#inputs" class="btn btn-danger" onclick="resetear()"
+            >Resetear</a
+          >
         </div>
+      </div>
+    </div>
+
+    <div id="contacto" class="contactame">
+      <div>
+        <h2>Contacto</h2>
+        <p><b>Samuel Madrigal Castaño</b></p>
+        <p><b>samuelmadrigalc@gmail.com</b></p>
+        <p><b>+57 311 519 8175</b></p>
+        <p>
+          <b>LinkedIn:</b>
+          <a
+            href="https://www.linkedin.com/in/samuel-madrigal-castaño-ab3a1128a"
+            target="_blank"
+          >
+            linkedin.com/in/samuel-madrigal-castaño-ab3a1128a
+          </a>
+        </p>
       </div>
     </div>
   </body>
