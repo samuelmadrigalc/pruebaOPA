@@ -1,8 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 20px;
-  background: #f7f9fb;
+  background-color: #411453;
 }
 
 h1 {
@@ -10,11 +10,31 @@ h1 {
 }
 
 .filaInputs {
+  padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-bottom: 30px;
+
+  background-image: url("img/bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; 
+  border-radius: 15px;         
+  padding: 20px;         
+  
+  min-height: 730px;
+
+  margin: 0;
+}
+
+
+
+.contactame {
+  background-color: linear-gradient(180deg, #2a5298, #0000);
+  justify-content: center;
+  gap: 20px;
+  width: 1000 px;
 }
 
 label {
@@ -37,6 +57,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: flex;
 }
 
 button:hover {
@@ -44,10 +65,14 @@ button:hover {
 }
 
 .filaContenido {
+  padding: 100px;
+  background: linear-gradient(180deg, #4b82e7, #2a5298);
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
+  margin: 0;
+  width: 1300px;
 }
 
 .caja {
@@ -58,11 +83,16 @@ button:hover {
   width: 300px;
   min-height: 200px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .caja h3 {
   margin-top: 0;
   text-align: center;
+}
+
+.caja a.btn{
+    margin-top: 20px;
 }
 
 #perfecto {
@@ -83,7 +113,6 @@ button:hover {
   background: #c9302c;
 }
 
-
 .cajaContenido {
   background: #fff;
   border: 2px solid #ddd;
@@ -100,7 +129,9 @@ button:hover {
 }
 
 .cajaResultados {
-  background: #fff;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
   border: 2px solid #ddd;
   border-radius: 50px;
   padding: 20px;
@@ -113,4 +144,105 @@ button:hover {
 .cajaResultados h3 {
   margin-top: 0;
   text-align: center;
+}
+
+.burbujas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.burbujas span {
+  position: absolute;
+  bottom: -150px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 150, 255, 0.2);
+  border-radius: 50%;
+  animation: subir 10s infinite ease-in;
+}
+
+.burbujas span:nth-child(1) {
+  left: 10%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 8s;
+}
+.burbujas span:nth-child(2) {
+  left: 30%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 12s;
+}
+.burbujas span:nth-child(3) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 10s;
+}
+.burbujas span:nth-child(4) {
+  left: 70%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 14s;
+}
+.burbujas span:nth-child(5) {
+  left: 90%;
+  width: 20px;
+  height: 20px;
+  animation-duration: 9s;
+}
+.burbujas span:nth-child(6) {
+  left: 40%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 11s;
+}
+.burbujas span:nth-child(7) {
+  left: 80%;
+  width: 45px;
+  height: 45px;
+  animation-duration: 13s;
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+body * {
+  position: relative;
+  z-index: 1;
+}
+
+#contacto {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: #411453;
+  width: 1300px;
+  margin: 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #e0f7fa;
+}
+
+#contacto h2 {
+  margin-bottom: 15px;
+}
+
+#contacto p {
+  margin: 8px 0;
 }
